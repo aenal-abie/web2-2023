@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/barang/create', 'App\Http\Controllers\BarangController@create');
+Route::post('/barang', 'App\Http\Controllers\BarangController@store');
