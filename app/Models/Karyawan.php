@@ -15,6 +15,7 @@ class Karyawan extends Model
         'nama',
         'jabatan',
         'jenis_kelamin',
+        'tanggal_lahir',
         'tanggal_bergabung'
     ];
 }
