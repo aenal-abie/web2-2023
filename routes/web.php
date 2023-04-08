@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,7 @@ Route::get('/home', function () {
     return view('home.index');
 });
 
-Route::post('/home', function () {
-    return view('home.index');
-});
+Route::get('/home/home',  [HomeController::class, 'home']);
 
 Route::get('/karyawan', [KaryawanController::class, 'index'])->name('karyawan.index');
 
