@@ -18,6 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('home.index');
+});
+
+Route::post('/home', function () {
+    return view('home.index');
+});
+
 Route::get('/karyawan', [KaryawanController::class, 'index'])->name('karyawan.index');
 
 Route::get('/karyawan/create', [KaryawanController::class, 'create'])->name('karyawan.create');
