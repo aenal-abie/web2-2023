@@ -22,7 +22,7 @@ class KaryawanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama' => 'required',
+            'nama' => 'required|email',
             'jabatan' => 'required',
             'jenis_kelamin' => 'required',
             'tanggal_lahir' => 'required|date',

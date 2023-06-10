@@ -17,6 +17,10 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/jabatan', [JabatanController::class, 'index'])->name('jabatan.index');
+Route::get('/jabatan/create', [JabatanController::class, 'create'])->name('jabatan.create');
+
+Route::post('/jabatan/store', [JabatanController::class, 'store'])->name('jabatan.store');
+
 
 Route::get('/', function () {
     return view('welcome');

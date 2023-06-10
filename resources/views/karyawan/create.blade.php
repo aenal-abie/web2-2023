@@ -10,14 +10,14 @@
                 @csrf
                 <div class="form-group">
                     <label for="nama">Nama</label>
-                    <input type="text" name="nama" id="nama" class="form-control @error('nama') is-invalid @enderror" value="{{ old('nama') }}" required>
+                    <input type="text" name="nama" id="nama" class="form-control @error('nama') is-invalid @enderror" value="{{ old('nama') }}" >
                     @error('nama')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="form-group">
                     <label for="jabatan">Jabatan</label>
-                    <select name="jabatan" id="jabatan" class="form-control @error('jabatan') is-invalid @enderror" required>
+                    <select name="jabatan" id="jabatan" class="form-control @error('jabatan') is-invalid @enderror">
                         <option value="" disabled selected>Pilih jabatan</option>
                         <option value="kasir" {{ old('jabatan') == 'kasir' ? 'selected' : '' }}>Kasir</option>
                         <option value="supervisor" {{ old('jabatan') == 'supervisor' ? 'selected' : '' }}>Supervisor</option>
@@ -31,11 +31,11 @@
                     <label for="jenis_kelamin">Jenis Kelamin</label>
                     <div>
                         <div class="form-check form-check-inline">
-                            <input type="radio" name="jenis_kelamin" id="jenis_kelamin_l" class="form-check-input @error('jenis_kelamin') is-invalid @enderror" value="Laki-laki" {{ old('jenis_kelamin') == 'L' ? 'checked' : '' }} required>
+                            <input type="radio" name="jenis_kelamin" id="jenis_kelamin_l" class="form-check-input @error('jenis_kelamin') is-invalid @enderror" value="Laki-laki" {{ old('jenis_kelamin') == 'Laki-laki' ? 'checked' : '' }} >
                             <label for="jenis_kelamin_l" class="form-check-label">Laki-laki</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input type="radio" name="jenis_kelamin" id="jenis_kelamin_p" class="form-check-input @error('jenis_kelamin') is-invalid @enderror" value="Perempuan" {{ old('jenis_kelamin') == 'P' ? 'checked' : '' }} required>
+                            <input type="radio" name="jenis_kelamin" id="jenis_kelamin_p" class="form-check-input @error('jenis_kelamin') is-invalid @enderror" value="Perempuan" {{ old('jenis_kelamin') == 'Perempuan' ? 'checked' : '' }} >
                             <label for="jenis_kelamin_p" class="form-check-label">Perempuan</label>
                         </div>
                     </div>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="form-group">
                     <label for="tanggal_lahir">Tanggal Lahir</label>
-                    <input type="date" name="tanggal_lahir" id="tanggal_lahir" class="form-control @error('tanggal_lahir') is-invalid @enderror" value="{{ old('tanggal_lahir') }}" required>
+                    <input type="date" name="tanggal_lahir" id="tanggal_lahir" class="form-control @error('tanggal_lahir') is-invalid @enderror" value="{{ old('tanggal_lahir') }}">
                     @error('tanggal_lahir')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
