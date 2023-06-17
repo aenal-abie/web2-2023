@@ -24,6 +24,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('karyawan.create') }}">Tambah Karyawan</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('jabatan.index') }}">Daftar Jabatan</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('jabatan.create') }}">Tambah Jabatan</a>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -17,10 +17,16 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/jabatan', [JabatanController::class, 'index'])->name('jabatan.index');
+
 Route::get('/jabatan/create', [JabatanController::class, 'create'])->name('jabatan.create');
 
 Route::post('/jabatan/store', [JabatanController::class, 'store'])->name('jabatan.store');
 
+Route::get('/jabatan/{jabatan}/edit', [JabatanController::class, 'edit'])->name('jabatan.edit');
+
+Route::put('/jabatan/{jabatan}', [JabatanController::class, 'update'])->name('jabatan.update');
+
+Route::delete('/jabatan/{jabatan}', [JabatanController::class, 'destroy'])->name('jabatan.destroy');
 
 Route::get('/', function () {
     return view('welcome');

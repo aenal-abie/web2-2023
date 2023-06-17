@@ -24,6 +24,13 @@
                             <td>{{ $k->nama_jabatan }}</td>
                             <td>{{ $k->priode }}</td>
                             <td>
+                            <a href="{{ route('jabatan.edit', $k->id) }}" class="btn btn-warning btn-sm">Edit</a>
+
+                            <form action="{{ route('jabatan.destroy', $k->id) }}" method="POST" class="d-inline">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach

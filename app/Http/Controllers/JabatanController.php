@@ -31,5 +31,28 @@ class JabatanController extends Controller
             ->with('success', 'Data jabatan berhasil ditambahkan.');
     }
 
+    public function edit(Jabatan $jabatan)
+    {
+        return view('jabatan.edit', compact('jabatan'));
+    }
+
+
+    public function update(Request $request, Jabatan $jabatan)
+    {
+        $jabatan->update($request->all());
+
+        return redirect()->route('jabatan.index')
+            ->with('success', 'Data jabatan berhasil diupdate.');
+    }
+
+    public function destroy(Jabatan $jabatan)
+    {
+        $jabatan->delete();
+
+        return redirect()->route('jabatan.index')
+            ->with('success', 'Data Jabatan berhasil dihapus.');
+    }
+
+
 
 }
