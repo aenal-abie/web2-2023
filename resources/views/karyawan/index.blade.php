@@ -24,7 +24,7 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $k->nama }}</td>
-                            <td>{{ $k->jabatan }}</td>
+                            <td>{{ $k->jabatanKaryawan->jabatan->nama_jabatan }}</td>
                             <td>{{ $k->jenis_kelamin }}</td>
                             <td>{{ $k->tanggal_lahir }}</td>
                             <td>{{ $k->tanggal_bergabung }}</td>

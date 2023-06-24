@@ -18,4 +18,8 @@ class Karyawan extends Model
         'tanggal_lahir',
         'tanggal_bergabung'
     ];
+
+    public function jabatanKaryawan() {
+        return $this->hasOne(JabatanKaryawan::class);
+    }
 }
